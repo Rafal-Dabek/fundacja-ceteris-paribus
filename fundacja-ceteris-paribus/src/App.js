@@ -1,6 +1,7 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
 function App() {
   const [showCookiePopup, setShowCookiePopup] = useState(true);
@@ -19,44 +20,34 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="logo-container">
-          <img
-            src="/images/Black White Elegant Monogram Initial Name Logo.svg"
-            alt="Fundacja Ceteris Paribus Logo"
-            className="logo"
-            style={{ maxWidth: '150px', maxHeight: '150px' }}
-          />
-        </div>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item active">
-              <button className="nav-link btn btn-custom" href="#o-fundacji">O FUNDACJI</button>
-            </li>
-            <li className="nav-item">
-              <button className="nav-link btn btn-custom" href="#aktualnosci">AKTUALNOŚCI</button>
-            </li>
-            <li className="nav-item">
-              <button className="nav-link btn btn-custom" href="#statut">STATUT</button>
-            </li>
-            <li className="nav-item">
-              <button className="nav-link btn btn-custom" href="#kontakt">KONTAKT</button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
+      <Navbar collapseOnSelect expand="lg" className="navbar-light">
+  <Navbar.Brand href="#home">
+    <img
+      src="/images/Black White Elegant Monogram Initial Name Logo.svg"
+      alt="Fundacja Ceteris Paribus Logo"
+      className="logo"
+      style={{ maxWidth: '150px', maxHeight: '150px' }}
+    />
+  </Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+    <Nav className="ml-auto">
+      <Nav.Item>
+        <Nav.Link className="nav-link btn btn-custom" href="#o-fundacji">O FUNDACJI</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link className="nav-link btn btn-custom" href="#aktualnosci">AKTUALNOŚCI</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link className="nav-link btn btn-custom" href="#statut">STATUT</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link className="nav-link btn btn-custom" href="#kontakt">KONTAKT</Nav.Link>
+      </Nav.Item>
+      {/* Add more Nav.Item components as needed */}
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
       {showCookiePopup && (
         <div className="cookie-popup bg-dark text-white p-2">
           <p>Ta strona używa ciasteczek. Kliknij "Akceptuj", aby kontynuować.</p>

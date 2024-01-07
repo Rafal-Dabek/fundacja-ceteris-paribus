@@ -27,9 +27,15 @@
 .App-link {
   color: #61dafb;
 }
-.p-3{
-  background-color: #ABB1D4
 
+body {
+  overflow: hidden;
+}
+
+.p-3{
+  background-color: #ABB1D4;
+  width: 100%;
+  height: 100vh;
 }
 .navbar{
 
@@ -49,7 +55,11 @@
   border-width: 2px;   /* Grubość ramki */
 }
 
-
+@media (max-width: 992px) { /* Adjust the breakpoint as needed */
+  .btn-custom {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }
+}
 
 
 
