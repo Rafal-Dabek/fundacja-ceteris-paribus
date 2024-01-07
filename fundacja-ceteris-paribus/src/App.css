@@ -1,3 +1,11 @@
+:root {
+  --app-background-color: #ABB1D4;
+  --navbar-background-color: #BCD4AC;
+  --btn-background-color: #ABB1D4;
+  --btn-border-color: white;
+}
+
+
 .App {
   text-align: center;
 }
