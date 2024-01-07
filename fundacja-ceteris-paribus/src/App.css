@@ -27,6 +27,33 @@
 .App-link {
   color: #61dafb;
 }
+.p-3{
+  background-color: #ABB1D4
+
+}
+.navbar{
+
+  background-color:#BCD4AC
+
+}
+.btn{
+  background-color: #ABB1D4
+}
+.nav-item {
+  margin-right: 10px; /* Dostosuj wartość marginesu według potrzeb */
+}
+
+
+.btn-custom {
+  border-color: white; /* Kolor ramki */
+  border-width: 2px;   /* Grubość ramki */
+}
+
+
+
+
+
+
 
 @keyframes App-logo-spin {
   from {

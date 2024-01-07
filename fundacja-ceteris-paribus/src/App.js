@@ -1,6 +1,5 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
-//import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
@@ -20,21 +19,39 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">Fundacja Ceteris Paribus</a>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
+      <nav className="navbar navbar-expand-lg navbar-light">
+        <div className="logo-container">
+          <img
+            src="/images/Black White Elegant Monogram Initial Name Logo.svg"
+            alt="Fundacja Ceteris Paribus Logo"
+            className="logo"
+            style={{ maxWidth: '150px', maxHeight: '150px' }}
+          />
+        </div>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul className="navbar-nav">
             <li className="nav-item active">
-              <a className="nav-link" href="#o-fundacji">O FUNDACJI</a>
+              <button className="nav-link btn btn-custom" href="#o-fundacji">O FUNDACJI</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#aktualnosci">AKTUALNOŚCI</a>
+              <button className="nav-link btn btn-custom" href="#aktualnosci">AKTUALNOŚCI</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#statut">STATUT</a>
+              <button className="nav-link btn btn-custom" href="#statut">STATUT</button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#kontakt">KONTAKT</a>
+              <button className="nav-link btn btn-custom" href="#kontakt">KONTAKT</button>
             </li>
           </ul>
         </div>
