@@ -1,5 +1,6 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
@@ -19,19 +20,25 @@ function App() {
 
   return (
     <div className="App">
-      <header className="bg-light p-3">
-        <img src="/path/to/logo.png" alt="Fundacja Ceteris Paribus" className="img-fluid" />
-        <nav className="navbar navbar-expand-lg navbar-light">
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav">
-              <li className="nav-item"><a className="nav-link" href="#o-fundacji">O FUNDACJI</a></li>
-              <li className="nav-item"><a className="nav-link" href="#aktualnosci">AKTUALNOŚCI</a></li>
-              <li className="nav-item"><a className="nav-link" href="#statut">STATUT</a></li>
-              <li className="nav-item"><a className="nav-link" href="#kontakt">KONTAKT</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <a className="navbar-brand" href="#">Fundacja Ceteris Paribus</a>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item active">
+              <a className="nav-link" href="#o-fundacji">O FUNDACJI</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#aktualnosci">AKTUALNOŚCI</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#statut">STATUT</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#kontakt">KONTAKT</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
 
       {showCookiePopup && (
         <div className="cookie-popup bg-dark text-white p-2">
